@@ -10,7 +10,8 @@ const GsapFromTo = () => {
         x: 400 }, 
       { rotation: 0,
         borderRadius: '100%',
-        x: 0, duration: 3, 
+        x: 0, 
+        duration: 3, 
         ease: 'bounce.out', 
         repeat: -1, 
         yoyo: 
