@@ -20,12 +20,16 @@ const GsapTimeline = () => {
       y: 150,
       duration: 2,
       ease: 'back.inOut',
+      scale : 1.5,
+      borderRadius: '20%',
     })
 
     timeline.to("#yellow-box", {
       y: 0,
       duration: 2,
       ease: 'back.inOut',
+      scale : 1,
+      borderRadius: '100%',
     })
 
     timeline.to("#yellow-box", {
@@ -72,7 +76,13 @@ const GsapTimeline = () => {
       </p>
 
       <div className="mt-20 space-y-10">
-        <button onClick={() => {}}>Play/Pause</button>
+        <button onClick={() => {
+          if (timeline.paused()) {
+            timeline.play();
+          } else {
+            timeline.pause();
+          }
+        }}>Play/Pause</button>
 
         <div id="yellow-box" className="w-20 h-20 bg-yellow-500 rounded-lg" />
       </div>
