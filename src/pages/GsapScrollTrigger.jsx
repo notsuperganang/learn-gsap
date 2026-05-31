@@ -28,7 +28,7 @@ const GsapScrollTrigger = () => {
         }
       })
     })
-  }, []);
+  }, {scope: scrollRef});
 
   return (
     <main>
